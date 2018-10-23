@@ -1,4 +1,5 @@
 import React from "react";
+import CssBaseline from "@material-ui/core/CssBaseline";
 import AppBar from "@material-ui/core/AppBar";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
@@ -7,21 +8,14 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import Badge from "@material-ui/core/Badge";
+import Tooltip from "@material-ui/core/Tooltip";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-
-// const theme = createMuiTheme({  
-//   palette: {
-//     primary: {
-//       main: "#06baf6"
-//     }
-//   }   
-// });
+import { Link } from "react-router-dom";
 
 const styles = theme => ({
   root: {
@@ -71,13 +65,17 @@ const styles = theme => ({
     display: "block",
     maxWidth: "100%",
     maxHeight: "30px"
+  },
+  linkPrimary: {
+    color: "var(--primary)",
+    textDecoration: "none"
   }
 });
 
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: "#06baf6"
+      main: "#06baf6"      
     },
     secondary: {
       main: "#314E6F"
@@ -160,37 +158,52 @@ class MainAppBar extends React.Component {
       </Menu>
     );
 
-    return <MuiThemeProvider theme={theme}>        
+    return (        
+        <MuiThemeProvider theme={theme}>
+        <CssBaseline />
           <AppBar className={classes.root} position="fixed" color="default">
-            <Toolbar>
-              <img className={classes.logo} src="img/logo.png" alt="Logo"/>              
+            <Toolbar>  
+            <Button component={Link} to="/">>            
+                <img className={classes.logo} src="img/logo.png" alt="Logo"/>
+              </Button>              
+              <Button color="primary" component={Link} to="/">
+                Live                                   
+              </Button>
+              <Button color="primary" component={Link} to="/">                
+                  Vídeo                                        
+              </Button>
+              <Button color="primary" component={Link} to="/">                
+                  Play                                        
+              </Button>                    
               <div className={classes.grow} />
-              <div className={classes.sectionDesktop}>
-                <IconButton color="primary">
-                  <Badge badgeContent={4} color="secondary">
-                    <MailIcon />
-                  </Badge>
-                </IconButton>
-                <IconButton color="primary">
-                  <Badge badgeContent={17} color="secondary">
-                    <NotificationsIcon />
-                  </Badge>
-                </IconButton>                
-                  <Button className={classes.rightIcon} aria-owns={isMenuOpen ? "material-appbar" : null} aria-haspopup="true" onClick={this.handleProfileMenuOpen} color="primary">
-                <AccountCircle className={classes.leftIcon}/> Account                   
-                  </Button>
-                
+              <div className={classes.sectionDesktop}> 
+                <Button color="primary">
+                  <Link to="/landing-page" className={classes.linkPrimary}>
+                    Landing Page                   
+                  </Link>                                            
+                </Button>
+                <Tooltip title="Notificações">
+                  <IconButton color="primary">
+                    <Badge badgeContent={17} color="secondary">
+                      <NotificationsIcon />
+                    </Badge>
+                  </IconButton>  
+                </Tooltip>              
+                <Button className={classes.rightIcon} aria-owns={isMenuOpen ? "material-appbar" : null} aria-haspopup="true" onClick={this.handleProfileMenuOpen} color="primary">
+                  <AccountCircle className={classes.leftIcon} /> Account                   
+                </Button>                
               </div>
               <div className={classes.sectionMobile}>
                 <IconButton aria-haspopup="true" onClick={this.handleMobileMenuOpen} color="primary">
                   <MoreIcon />
                 </IconButton>
               </div>
-            </Toolbar>
+            </ Toolbar>
           </AppBar>
           {renderMenu}
           {renderMobileMenu}       
-      </MuiThemeProvider>;
+      </MuiThemeProvider>
+    );
   }
 }
 
