@@ -9,6 +9,9 @@ import PeopleIcon from '@material-ui/icons/People';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import LayersIcon from '@material-ui/icons/Layers';
 import AssignmentIcon from '@material-ui/icons/Assignment';
+import LocalMoviesIcon from '@material-ui/icons/LocalMovies';
+import VideoCallIcon from '@material-ui/icons/VideoCall';
+import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 
 export const mainListItems = (
   <div>
@@ -26,21 +29,27 @@ export const mainListItems = (
     </ListItem>
     <ListItem button>
       <ListItemIcon>
-        <PeopleIcon />
-      </ListItemIcon>
-      <ListItemText primary="Customers" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
         <BarChartIcon />
       </ListItemIcon>
       <ListItemText primary="Reports" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
-        <LayersIcon />
+        <CloudUploadIcon />
       </ListItemIcon>
-      <ListItemText primary="Integrations" />
+      <ListItemText primary="Upload" />
+    </ListItem>
+    <ListItem button>
+      <ListItemIcon>
+        <VideoCallIcon />
+      </ListItemIcon>
+      <ListItemText primary="Live" />
+    </ListItem>
+    <ListItem button>
+      <ListItemIcon>
+        <LocalMoviesIcon />
+      </ListItemIcon>
+      <ListItemText primary="Galeria" />
     </ListItem>
   </div>
 );
