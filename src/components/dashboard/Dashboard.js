@@ -174,9 +174,8 @@ class Dashboard extends React.Component {
               Orders
             </Typography>
             <Typography component="div" className={classes.chartContainer}>
-            
-             
 
+            
             </Typography>
             <Typography variant="h4" gutterBottom component="h2">
               Products

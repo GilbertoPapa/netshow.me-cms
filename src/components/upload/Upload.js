@@ -16,7 +16,8 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import { mainListItems, secondaryListItems } from '../dashboard/listItems';
 //import SimpleLineChart from './SimpleLineChart';
-import SimpleTable from '../dashboard/SimpleTable';
+//import SimpleTable from '../dashboard/SimpleTable';
+import Addmovie from './AddMovie'
 
 
 const drawerWidth = 240;
@@ -171,18 +172,16 @@ class Upload extends React.Component {
           <main className={classes.content}>
             <div className={classes.appBarSpacer} />
             <Typography variant="h4" gutterBottom component="h2">
-              Orders
+              Vídeos
             </Typography>
-            <Typography component="div" className={classes.chartContainer}>
 
+
+            <Typography component="div" className={classes.chartContainer}>
+            <Addmovie/>
             
             </Typography>
-            <Typography variant="h4" gutterBottom component="h2">
-              Products
-            </Typography>
-            <div className={classes.tableContainer}>
-              <SimpleTable />
-            </div>
+          
+
           </main>
         </div>
       </React.Fragment>
@@ -192,13 +191,8 @@ class Upload extends React.Component {
 
 }
 
-Dashboard.propTypes = {
+Upload.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(Upload);
-
-
-
-
-

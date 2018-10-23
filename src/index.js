@@ -6,6 +6,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import './index.css';
 import App from './App';
 //import Dashboard from './components/dashboard/Dashboard';
+//import Upload from './components/upload/Upload'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
