@@ -14,7 +14,7 @@ import { withStyles } from "@material-ui/core/styles";
 // with /roster or /schedule. The / route will only match
 // when the pathname is exactly the string "/"
 
-const drawerWidth = 240;
+// const drawerWidth = 240;
 
 const styles = theme => ({
   content: {
@@ -24,8 +24,8 @@ const styles = theme => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen
     }),
-    marginLeft: drawerWidth,
-    marginTop: "80px"
+    margin: "80px auto 0",
+    maxWidth: "1280px"
   },
   contentShift: {
     transition: theme.transitions.create("margin", {
@@ -50,8 +50,8 @@ class Main extends React.Component {
         })}>
         <Switch>
           <Route exact path="/" component={Dashboard} />
-          <Route path="/perfil" component={Perfil} />
-          <Route path="/gerenciamento-de-usuarios" component={Usuarios} />
+          <Route path="/admin/perfil" component={Perfil} />
+          <Route path="/admin/gerenciamento-de-usuarios" component={Usuarios} />
           <Route path="/galeria" component={Galeria} />
           <Route path="/analytics/video" component={Analytics} />
         </Switch>

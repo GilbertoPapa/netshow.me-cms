@@ -12,8 +12,6 @@ import Menu from "@material-ui/core/Menu";
 import MenuIcon from "@material-ui/icons/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import Toolbar from "@material-ui/core/Toolbar";
-import AccountCircle from "@material-ui/icons/AccountCircle";
-import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import Badge from "@material-ui/core/Badge";
@@ -166,7 +164,7 @@ class MainAppBar extends Component {
   state = {
     anchorEl: null,
     mobileMoreAnchorEl: null,
-    open: true
+    open: false
   };
 
   handleDrawerOpen = () => {
@@ -214,38 +212,20 @@ class MainAppBar extends Component {
       </Menu>
     );
 
-    const renderMobileMenu = (
-      <Menu
-        anchorEl={mobileMoreAnchorEl}
-        anchorOrigin={{ vertical: "top", horizontal: "right" }}
-        transformOrigin={{ vertical: "top", horizontal: "right" }}
-        open={isMobileMenuOpen}
-        onClose={this.handleMobileMenuClose}
-      >
-        <MenuItem>
-          <IconButton color="primary">
-            <Badge badgeContent={4} color="secondary">
-              <MailIcon />
-            </Badge>
-          </IconButton>
-          <p>Messages</p>
-        </MenuItem>
+    const renderMobileMenu = <Menu anchorEl={mobileMoreAnchorEl} anchorOrigin={{ vertical: "top", horizontal: "right" }} transformOrigin={{ vertical: "top", horizontal: "right" }} open={isMobileMenuOpen} onClose={this.handleMobileMenuClose}>
         <MenuItem>
           <IconButton color="primary">
             <Badge badgeContent={11} color="secondary">
               <NotificationsIcon />
             </Badge>
           </IconButton>
-          <p>Notifications</p>
+          <p>Notificações</p>
         </MenuItem>
         <MenuItem onClick={this.handleProfileMenuOpen}>
-          <IconButton color="primary">
-            <AccountCircle />
-          </IconButton>
-          <p>Profile</p>
+          <Avatar alt="Layla Vicente" src="/img/darth-vader.jpg" className={classes.avatar} />
+          <p>Layla Vicente</p>
         </MenuItem>
-      </Menu>
-    );
+      </Menu>;
 
     return <React.Fragment>
         <MuiThemeProvider theme={custom}>
@@ -261,7 +241,7 @@ class MainAppBar extends Component {
                 <MenuIcon />
               </IconButton>
               <Button component={Link} to="/">
-                <img className={classes.logo} src="img/logo.png" alt="Logo" />
+              <img className={classes.logo} src={process.env.PUBLIC_URL + "/img/logo.png"} alt="Logo" />
               </Button>
               <div className={classes.grow} />
               <div className={classes.sectionDesktop}>

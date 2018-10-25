@@ -62,10 +62,10 @@ handleListItemClick = (event, index) => {
         </ListItem>
       <Collapse key="1" in={this.state[1]} timeout="auto" unmountOnExit>
         <List className={classes.subListBgDark} component="div" disablePadding>
-            <ListItem button className={classes.nested} selected={this.state.selectedIndex === 8} onClick={event => this.handleListItemClick(event, 8)} component={Link} to="/perfil">
+            <ListItem button className={classes.nested} selected={this.state.selectedIndex === 8} onClick={event => this.handleListItemClick(event, 8)} component={Link} to="/admin/perfil">
               <ListItemText inset primary="Perfil" />
             </ListItem>
-          <ListItem button className={classes.nested} selected={this.state.selectedIndex === 9} onClick={event => this.handleListItemClick(event, 9)} component={Link} to="/gerenciamento-de-usuarios">
+          <ListItem button className={classes.nested} selected={this.state.selectedIndex === 9} onClick={event => this.handleListItemClick(event, 9)} component={Link} to="/admin/gerenciamento-de-usuarios">
               <ListItemText inset primary="Gerenciamento de Usuários" />
             </ListItem>
           </List>
