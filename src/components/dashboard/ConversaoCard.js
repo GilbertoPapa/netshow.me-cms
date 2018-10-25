@@ -41,10 +41,8 @@ function SimpleCard(props) {
       <Grid item key={card} sm={10} md={8} lg={3}>
           <Card className={classes.card}>
             <CardContent className={classes.cardContent}>
-              <Typography gutterBottom variant="h6" component="h2">
-                Conversão
-              </Typography>
-              <Typography gutterBottom variant="h5" component="h2">
+
+              <Typography gutterBottom variant="h4" component="h2">
                 75%
               </Typography>
             </CardContent>

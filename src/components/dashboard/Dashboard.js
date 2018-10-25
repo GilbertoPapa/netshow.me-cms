@@ -5,9 +5,10 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import Typography from "@material-ui/core/Typography";
 import SimpleLineChart from "./SimpleLineChart";
 import ReplayCard from "./ReplayCard";
-import ConversaoCard from "./ConversãoCard";
+import ConversaoCard from "./ConversaoCard";
 import TempoMedioCard from "./TempoMedioCard";
 import TopTrendingCard from "./TopTrendingCard";
+import NovidadesCard from "./NovidadesCard";
 
 
 const styles = theme => ({
@@ -76,6 +77,10 @@ class Dashboard extends React.Component {
                 Top trending vídeos
               </Typography>
           <TopTrendingCard />
+          <Typography gutterBottom variant="h6" component="h2">
+                Top trending vídeos
+              </Typography>
+          <NovidadesCard/>
         </div>
       </React.Fragment>
     );
