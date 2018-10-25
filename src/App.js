@@ -4,9 +4,11 @@ import classNames from "classnames";
 import { createMuiTheme } from "@material-ui/core/styles";
 import Header from "./components/Header";
 //import Footer from "./components/Footer";
-import Dashboard from "./components/dashboard/Dashboard";
+//import Dashboard from "./components/dashboard/Dashboard";
 //import Upload from "./components/upload/Upload";
-//import Album from "./components/album/Album"
+//import Album from "./components/album/Album";
+import CenterMode from "./components/album/CenterMode";
+import { black } from 'ansi-colors';
 
 const drawerWidth = 240;
 
@@ -125,7 +127,8 @@ const styles = theme => ({
       duration: theme.transitions.duration.enteringScreen
     }),
     marginLeft: drawerWidth
-  }
+  },
+
 });
 
 const custom = createMuiTheme({
@@ -166,7 +169,7 @@ class App extends Component {
             [classes.contentShift]: open
           })}
         >
-          <Dashboard />
+        
         </main>
       </React.Fragment>
     );

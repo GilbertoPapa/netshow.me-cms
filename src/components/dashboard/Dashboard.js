@@ -4,7 +4,8 @@ import { withStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Typography from "@material-ui/core/Typography";
 import SimpleLineChart from "./SimpleLineChart";
-import SimpleTable from "./SimpleTable";
+import SimpleCard from "./SimpleCard";
+
 
 const styles = theme => ({  
   toolbar: {
@@ -22,7 +23,7 @@ const styles = theme => ({
     marginLeft: -22
   },
   tableContainer: {
-    height: 320
+    height: 320,
   },
   h5: {
     marginBottom: theme.spacing.unit * 2
@@ -59,8 +60,11 @@ class Dashboard extends React.Component {
           Products
         </Typography>
         <div className={classes.tableContainer}>
-          <SimpleTable />
-        </div>                  
+          <SimpleCard/>
+          <SimpleCard/>
+          <SimpleCard/>     
+        </div>           
+            
       </React.Fragment>
     );
   }
