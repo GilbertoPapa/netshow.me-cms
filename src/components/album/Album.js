@@ -11,7 +11,8 @@ import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import { mainListItems, secondaryListItems } from "../dashboard/listItems";
-import CenterMode from "./CenterMode";
+//import CenterMode from "./CenterMode";
+import VideoCard from "./VideoCard";
 
 const drawerWidth = 240;
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
@@ -84,7 +85,7 @@ const styles = theme => ({
     overflow: "auto"
   },
   chartContainer: {
-    marginLeft: -22
+    marginLeft: 10
   },
   tableContainer: {
     height: 320
@@ -154,10 +155,15 @@ class Album extends React.Component {
       <React.Fragment>
         <CssBaseline />
             <Typography variant="h4" gutterBottom component="h2">
-              Vídeos
+              Lives Armazenadas
             </Typography>
             <Typography component="div" className={classes.chartContainer}>
-            <CenterMode/>
+            <div style={{display: 'inline-block'}}>
+            <VideoCard/>
+            <VideoCard/>
+            <VideoCard/>
+            </div>
+            
             </Typography>
             <div className={classes.tableContainer} /> 
       </React.Fragment>

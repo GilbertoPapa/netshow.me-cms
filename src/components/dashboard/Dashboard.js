@@ -4,10 +4,13 @@ import { withStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Typography from "@material-ui/core/Typography";
 import SimpleLineChart from "./SimpleLineChart";
-import SimpleCard from "./SimpleCard";
+import ReplayCard from "./ReplayCard";
+import ConversaoCard from "./ConversãoCard";
+import TempoMedioCard from "./TempoMedioCard";
+import TopTrendingCard from "./TopTrendingCard";
 
 
-const styles = theme => ({  
+const styles = theme => ({
   toolbar: {
     paddingRight: 1
   },
@@ -18,12 +21,12 @@ const styles = theme => ({
     padding: "0 8px",
     ...theme.mixins.toolbar
   },
-  
+
   chartContainer: {
     marginLeft: -22
   },
   tableContainer: {
-    height: 320,
+    height: 320
   },
   h5: {
     marginBottom: theme.spacing.unit * 2
@@ -49,22 +52,31 @@ class Dashboard extends React.Component {
     return (
       <React.Fragment>
         <CssBaseline />
-                 
+
         <Typography variant="h4" gutterBottom component="h2">
           Views
         </Typography>
         <Typography component="div" className={classes.chartContainer}>
           <SimpleLineChart />
         </Typography>
-        <Typography variant="h4" gutterBottom component="h2">
-          Products
-        </Typography>
         <div className={classes.tableContainer}>
-          <SimpleCard/>
-          <SimpleCard/>
-          <SimpleCard/>     
-        </div>           
-            
+          <Typography gutterBottom variant="h6" component="h2">
+            Taxa de Replay
+          </Typography>
+          <ReplayCard />
+          <Typography gutterBottom variant="h6" component="h2">
+                Conversão
+              </Typography>
+          <ConversaoCard />
+          <Typography gutterBottom variant="h6" component="h2">
+                Tempo Médio de Exibição (Minutos)
+              </Typography>
+          <TempoMedioCard />
+          <Typography gutterBottom variant="h6" component="h2">
+                Top trending vídeos
+              </Typography>
+          <TopTrendingCard />
+        </div>
       </React.Fragment>
     );
   }
