@@ -13,8 +13,7 @@ const styles = {
   card: {
     minWidth: 275,
     display: "flex",
-    flexDirection: "column",
-    
+    flexDirection: "column"
   },
   bullet: {
     display: "inline-block",
@@ -32,28 +31,44 @@ const card = [1];
 function SimpleCard(props) {
   const { classes } = props;
 
-  return <React.Fragment>    
-        
-        <Grid item key={card} sm={12} md={6}>
-          <Typography gutterBottom variant="h6" component="h2">
-            Conversão
-          </Typography>
-          <Card className={classes.card}>
-            <CardContent className={classes.cardContent}>
-              <Typography gutterBottom variant="h4" component="h2">
-                75%
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Select />
-              <Button size="small" color="primary">
-                Filtrar
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-      
-    </React.Fragment>;
+  return (
+    <React.Fragment>
+      <Grid item key={card} sm={12} md={6}>
+        <Typography gutterBottom variant="h6" component="h2">
+          Conversão
+        </Typography>
+        <Card className={classes.card}>
+          <CardContent className={classes.cardContent}>
+            
+            <Typography gutterBottom variant="h4" component="h2">
+              75%
+            </Typography>
+            <Typography>
+              <br />
+            </Typography>
+            <Typography>
+              <br />
+            </Typography>
+            <Typography>
+              <br />
+            </Typography>
+            <Typography>
+              <br />
+            </Typography>
+            <Typography>
+              <br />
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <Select />
+            <Button size="small" color="primary">
+              Filtrar
+            </Button>
+          </CardActions>
+        </Card>
+      </Grid>
+    </React.Fragment>
+  );
 }
 
 SimpleCard.propTypes = {

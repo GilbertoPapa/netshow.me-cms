@@ -18,7 +18,7 @@ import image from "../img/media-default-thumbnail-url-video.png";
 
 const styles = {
   card: {
-    minWidth: 275,
+    minWidth: 260,
     display: "flex",
     flexDirection: "column"
   },
@@ -28,7 +28,7 @@ const styles = {
     transform: "scale(0.8)"
   },
   title: {
-    fontSize: 14
+    fontSize: 10
   },
   pos: {
     marginBottom: 12
@@ -53,7 +53,7 @@ function SimpleCard(props) {
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
-                Título da Live
+                Título
               </Typography>
               <Typography component="p">Data de Exibição</Typography>
             </CardContent>

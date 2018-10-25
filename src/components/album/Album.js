@@ -154,19 +154,46 @@ class Album extends React.Component {
     return (
       <React.Fragment>
         <CssBaseline />
-            <Typography variant="h4" gutterBottom component="h2">
-              Lives Armazenadas
+        <Typography variant="h5" gutterBottom component="h2">
+          Lives Armazenadas
+        </Typography>
+        <Typography component="div" className={classes.chartContainer}>
+          <Grid container spacing={16}>
+            <VideoCard />
+            <VideoCard />
+            <VideoCard />
+            <VideoCard />
+          </Grid>
+        </Typography>
+        <Typography>
+              <br />
             </Typography>
-            <Typography component="div" className={classes.chartContainer}>
-            <Grid container spacing={16}>
-              <VideoCard/>
-              <VideoCard/>
-              <VideoCard/>
-              <VideoCard/>
-            </Grid>
-            
+        <Typography variant="h5" gutterBottom component="h2">
+          Vídeos On Demand
+        </Typography>
+        <Typography component="div" className={classes.chartContainer}>
+          <Grid container spacing={16}>
+            <VideoCard />
+            <VideoCard />
+            <VideoCard />
+            <VideoCard />
+          </Grid>
+        </Typography>
+        <Typography>
+              <br />
             </Typography>
-            <div className={classes.tableContainer} /> 
+        <Typography variant="h5" gutterBottom component="h2">
+          Vídeos Over The Top
+        </Typography>
+        <Typography component="div" className={classes.chartContainer}>
+          <Grid container spacing={16}>
+            <VideoCard />
+            <VideoCard />
+            <VideoCard />
+            <VideoCard />
+          </Grid>
+        </Typography>
+        <div className={classes.tableContainer} />
       </React.Fragment>
     );
   }

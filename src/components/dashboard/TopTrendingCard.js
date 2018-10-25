@@ -8,6 +8,7 @@ import Grid from "@material-ui/core/Grid";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import image from "../img/media-default-thumbnail-url-video.png";
+import MediaControlCard from "./MediaControlCard";
 
 const styles = {
   card: {
@@ -42,22 +43,21 @@ function SimpleCard(props) {
           Top Trending Vídeos
         </Typography>
         <Card className={classes.card}>
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              image={image}
-              title="Contemplative Reptile"
-            />
+          
+          
             <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                Lizard
-              </Typography>
-              <Typography component="p">
-                Lizards are a widespread group of squamate reptiles, with over
-                6,000 species, ranging across all continents except Antarctica
-              </Typography>
+              <CardActionArea>
+              <MediaControlCard/>
+              </CardActionArea>
+              <CardActionArea>
+              <MediaControlCard/>
+              </CardActionArea>
+              <CardActionArea>
+              <MediaControlCard/>
+              </CardActionArea>
+
             </CardContent>
-          </CardActionArea>
+          
         </Card>
       </Grid>
     </React.Fragment>

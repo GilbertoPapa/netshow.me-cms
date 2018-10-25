@@ -57,7 +57,7 @@ class SimpleSelect extends React.Component {
           </Select>
         </FormControl>
         <FormControl className={classes.formControl}>
-          <InputLabel htmlFor="age-helper">De</InputLabel>
+          <InputLabel htmlFor="age-helper">Até</InputLabel>
           <Select
             value={this.state.age}
             onChange={this.handleChange}

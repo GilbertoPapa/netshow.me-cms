@@ -26,8 +26,19 @@ const styles = {
   },
   pos: {
     marginBottom: 12
+  },
+
+  palette: {
+    primary: {
+      main: "#06baf6"
+    },
+    secondary: {
+      main: "#314E6F"
+    }
   }
 };
+
+
 const card = [1];
 function SimpleCard(props) {
   const { classes } = props;

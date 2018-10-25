@@ -61,15 +61,37 @@ class RecipeReviewCard extends React.Component {
           </Typography>
         <Card className={classes.card}>
           <CardHeader
-            title="Shrimp and Chorizo Paella"
-            subheader="September 14, 2016"
+            title="Atualização do Player"
+            subheader="23/09/2018"
+          />
+          <CardContent>
+            <Typography component="p">
+              This impressive paella is a perfect party dish and a fun meal to cook together with your
+              guests.
+            </Typography>
+          </CardContent>
+           <CardHeader
+            title="Atualização do módulo de Lives"
+            subheader="20/09/2018"
+          />
+
+          <CardContent>
+            <Typography component="p">
+              This impressive paella is a perfect party dish and a fun meal to cook together with your
+              guests. 
+            </Typography>
+          </CardContent>
+
+           <CardHeader
+            title="Atualização do Analytics"
+            subheader="15/09/2018"
           />
           <CardMedia
           />
           <CardContent>
             <Typography component="p">
               This impressive paella is a perfect party dish and a fun meal to cook together with your
-              guests. Add 1 cup of frozen peas along with the mussels, if you like.
+              guests. 
             </Typography>
           </CardContent>
           <CardActions className={classes.actions} disableActionSpacing>
