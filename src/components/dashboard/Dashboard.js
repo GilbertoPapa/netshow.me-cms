@@ -4,9 +4,14 @@ import { withStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Typography from "@material-ui/core/Typography";
 import SimpleLineChart from "./SimpleLineChart";
-import SimpleTable from "./SimpleTable";
+import ReplayCard from "./ReplayCard";
+import ConversaoCard from "./ConversaoCard";
+import TempoMedioCard from "./TempoMedioCard";
+import TopTrendingCard from "./TopTrendingCard";
+import NovidadesCard from "./NovidadesCard";
 
-const styles = theme => ({  
+
+const styles = theme => ({
   toolbar: {
     paddingRight: 1
   },
@@ -17,7 +22,7 @@ const styles = theme => ({
     padding: "0 8px",
     ...theme.mixins.toolbar
   },
-  
+
   chartContainer: {
     marginLeft: -22
   },
@@ -48,19 +53,35 @@ class Dashboard extends React.Component {
     return (
       <React.Fragment>
         <CssBaseline />
-                 
+
         <Typography variant="h4" gutterBottom component="h2">
           Views
         </Typography>
         <Typography component="div" className={classes.chartContainer}>
           <SimpleLineChart />
         </Typography>
-        <Typography variant="h4" gutterBottom component="h2">
-          Products
-        </Typography>
         <div className={classes.tableContainer}>
-          <SimpleTable />
-        </div>                  
+          <Typography gutterBottom variant="h6" component="h2">
+            Taxa de Replay
+          </Typography>
+          <ReplayCard />
+          <Typography gutterBottom variant="h6" component="h2">
+                Conversão
+              </Typography>
+          <ConversaoCard />
+          <Typography gutterBottom variant="h6" component="h2">
+                Tempo Médio de Exibição (Minutos)
+              </Typography>
+          <TempoMedioCard />
+          <Typography gutterBottom variant="h6" component="h2">
+                Top trending vídeos
+              </Typography>
+          <TopTrendingCard />
+          <Typography gutterBottom variant="h6" component="h2">
+                Top trending vídeos
+              </Typography>
+          <NovidadesCard/>
+        </div>
       </React.Fragment>
     );
   }
