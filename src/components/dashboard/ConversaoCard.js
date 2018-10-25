@@ -6,11 +6,7 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import MenuItem from "@material-ui/core/MenuItem";
-import FormHelperText from "@material-ui/core/FormHelperText";
-import FormControl from "@material-ui/core/FormControl";
 import Grid from "@material-ui/core/Grid";
-import Input from "@material-ui/core/Input";
 import Select from "./Select";
 
 const styles = {
@@ -36,18 +32,20 @@ const card = [1];
 function SimpleCard(props) {
   const { classes } = props;
 
-  return (
-    <Grid container spacing={40}>
-      <Grid item key={card} sm={10} md={8} lg={3}>
+  return <React.Fragment>    
+        
+        <Grid item key={card} sm={12} md={6}>
+          <Typography gutterBottom variant="h6" component="h2">
+            Conversão
+          </Typography>
           <Card className={classes.card}>
             <CardContent className={classes.cardContent}>
-
               <Typography gutterBottom variant="h4" component="h2">
                 75%
               </Typography>
             </CardContent>
             <CardActions>
-              <Select/>
+              <Select />
               <Button size="small" color="primary">
                 Filtrar
               </Button>
@@ -55,9 +53,7 @@ function SimpleCard(props) {
           </Card>
         </Grid>
       
-    </Grid>
-    
-  );
+    </React.Fragment>;
 }
 
 SimpleCard.propTypes = {

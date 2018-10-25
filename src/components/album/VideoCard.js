@@ -42,9 +42,8 @@ const card = [1];
 function SimpleCard(props) {
   const { classes } = props;
 
-  return (
-    <Grid container spacing={40}>
-      <Grid item key={card} sm={10} md={8} lg={3}>
+  return (    
+      <Grid item key={card} sm={12} md={6} lg={3}>
         <Card className={classes.card}>
           <CardActionArea>
             <CardMedia
@@ -61,7 +60,7 @@ function SimpleCard(props) {
           </CardActionArea>
         </Card>
       </Grid>
-    </Grid>
+    
 
     /*
    <Grid container spacing={40}>

@@ -2,16 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
-import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import MenuItem from "@material-ui/core/MenuItem";
-import FormHelperText from "@material-ui/core/FormHelperText";
-import FormControl from "@material-ui/core/FormControl";
 import Grid from "@material-ui/core/Grid";
-import Input from "@material-ui/core/Input";
-import Select from "./Select";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import image from "../img/media-default-thumbnail-url-video.png";
@@ -43,8 +36,11 @@ function SimpleCard(props) {
   const { classes } = props;
 
   return (
-    <Grid container spacing={40}>
-      <Grid item key={card} sm={10} md={8} lg={3}>
+    <React.Fragment>
+      <Grid item key={card} sm={12} md={6}>
+        <Typography gutterBottom variant="h6" component="h2">
+          Top Trending Vídeos
+        </Typography>
         <Card className={classes.card}>
           <CardActionArea>
             <CardMedia
@@ -64,7 +60,7 @@ function SimpleCard(props) {
           </CardActionArea>
         </Card>
       </Grid>
-    </Grid>
+    </React.Fragment>
 
     /*
    <Grid container spacing={40}>

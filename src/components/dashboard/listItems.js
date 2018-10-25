@@ -46,7 +46,7 @@ handleListItemClick = (event, index) => {
     const { classes } = this.props;
 
     return <React.Fragment>
-        <ListItem button selected={this.state.selectedIndex === 0} onClick={event => this.handleListItemClick(event, 0)}>
+        <ListItem button selected={this.state.selectedIndex === 0} onClick={event => this.handleListItemClick(event, 0)} component={Link} to="/">
           <ListItemIcon>
             <DashboardIcon />
           </ListItemIcon>
@@ -61,10 +61,10 @@ handleListItemClick = (event, index) => {
         </ListItem>
       <Collapse key="1" in={this.state[1]} timeout="auto" unmountOnExit>
         <List className={classes.subListBgDark} component="div" disablePadding>
-            <ListItem button className={classes.nested} selected={this.state.selectedIndex === 7} onClick={event => this.handleListItemClick(event, 7)} component={Link} to="/perfil">
+            <ListItem button className={classes.nested} selected={this.state.selectedIndex === 8} onClick={event => this.handleListItemClick(event, 8)} component={Link} to="/perfil">
               <ListItemText inset primary="Perfil" />
             </ListItem>
-          <ListItem button className={classes.nested} selected={this.state.selectedIndex === 8} onClick={event => this.handleListItemClick(event, 8)} component={Link} to="/gerenciamento-de-usuarios">
+          <ListItem button className={classes.nested} selected={this.state.selectedIndex === 9} onClick={event => this.handleListItemClick(event, 9)} component={Link} to="/gerenciamento-de-usuarios">
               <ListItemText inset primary="Gerenciamento de Usuários" />
             </ListItem>
           </List>
@@ -76,7 +76,14 @@ handleListItemClick = (event, index) => {
           </ListItemIcon>
           <ListItemText primary="Transmissão" />
         </ListItem>
-      <ListItem button selected={this.state.selectedIndex === 3} onClick={this.handleClick.bind(this, 2)}>
+
+        <ListItem button selected={this.state.selectedIndex === 3} onClick={event => this.handleListItemClick(event, 3)} component={Link} to="/galeria">
+          <ListItemIcon>
+            <WifiIcon />
+          </ListItemIcon>
+          <ListItemText primary="Galeria" />
+        </ListItem>
+      <ListItem button selected={this.state.selectedIndex === 4} onClick={this.handleClick.bind(this, 2)}>
           <ListItemIcon>
             <ShowChartIcon />
           </ListItemIcon>
@@ -85,13 +92,13 @@ handleListItemClick = (event, index) => {
         </ListItem>
       <Collapse key="2" in={this.state[2]} timeout="auto" unmountOnExit>
         <List className={classes.subListBgDark} component="div" disablePadding>
-            <ListItem button className={classes.nested} selected={this.state.selectedIndex === 4} onClick={event => this.handleListItemClick(event, 4)}>
+            <ListItem button className={classes.nested} selected={this.state.selectedIndex === 5} onClick={event => this.handleListItemClick(event, 5)}>
               <ListItemText inset primary="Vídeo" />
             </ListItem>
-            <ListItem button className={classes.nested} selected={this.state.selectedIndex === 5} onClick={event => this.handleListItemClick(event, 5)}>
+            <ListItem button className={classes.nested} selected={this.state.selectedIndex === 6} onClick={event => this.handleListItemClick(event, 6)}>
               <ListItemText inset primary="Live" />
             </ListItem>
-            <ListItem button className={classes.nested} selected={this.state.selectedIndex === 6} onClick={event => this.handleListItemClick(event, 6)}>
+            <ListItem button className={classes.nested} selected={this.state.selectedIndex === 7} onClick={event => this.handleListItemClick(event, 7)}>
               <ListItemText inset primary="Audiência" />
             </ListItem>
           </List>

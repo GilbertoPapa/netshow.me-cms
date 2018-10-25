@@ -1,8 +1,9 @@
-import React from 'react'
-import { Switch, Route } from 'react-router-dom'
-import Dashboard from './dashboard/Dashboard'
-import Perfil from './admin/Perfil'
+import React from "react";
+import { Switch, Route } from "react-router-dom"
+import Dashboard from "./dashboard/Dashboard";
+import Perfil from "./admin/Perfil";
 import Usuarios from "./admin/GerenciamentoDeUsuarios";
+import Galeria from "./album/Album";
 import classNames from "classnames";
 import { withStyles } from "@material-ui/core/styles";
 
@@ -53,6 +54,7 @@ class Main extends React.Component {
           <Route exact path="/" component={Dashboard} />
           <Route path="/perfil" component={Perfil} />
           <Route path="/gerenciamento-de-usuarios" component={Usuarios} />
+          <Route path="/galeria" component={Galeria} />
         </Switch>
       </main>
     );

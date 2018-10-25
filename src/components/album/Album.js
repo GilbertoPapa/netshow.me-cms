@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import { withStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import Grid from "@material-ui/core/Grid";
 import Drawer from "@material-ui/core/Drawer";
 import Toolbar from "@material-ui/core/Toolbar";
 import List from "@material-ui/core/List";
@@ -11,7 +12,6 @@ import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import { mainListItems, secondaryListItems } from "../dashboard/listItems";
-//import CenterMode from "./CenterMode";
 import VideoCard from "./VideoCard";
 
 const drawerWidth = 240;
@@ -158,11 +158,12 @@ class Album extends React.Component {
               Lives Armazenadas
             </Typography>
             <Typography component="div" className={classes.chartContainer}>
-            <div style={{display: 'inline-block'}}>
-            <VideoCard/>
-            <VideoCard/>
-            <VideoCard/>
-            </div>
+            <Grid container spacing={16}>
+              <VideoCard/>
+              <VideoCard/>
+              <VideoCard/>
+              <VideoCard/>
+            </Grid>
             
             </Typography>
             <div className={classes.tableContainer} /> 

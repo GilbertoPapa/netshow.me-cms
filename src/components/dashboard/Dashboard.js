@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import SimpleLineChart from "./SimpleLineChart";
 import ReplayCard from "./ReplayCard";
@@ -50,8 +51,7 @@ class Dashboard extends React.Component {
   render() {
     const { classes } = this.props;
 
-    return (
-      <React.Fragment>
+    return <React.Fragment>
         <CssBaseline />
 
         <Typography variant="h4" gutterBottom component="h2">
@@ -60,30 +60,18 @@ class Dashboard extends React.Component {
         <Typography component="div" className={classes.chartContainer}>
           <SimpleLineChart />
         </Typography>
-        <div className={classes.tableContainer}>
-          <Typography gutterBottom variant="h6" component="h2">
-            Taxa de Replay
-          </Typography>
-          <ReplayCard />
-          <Typography gutterBottom variant="h6" component="h2">
-                Conversão
-              </Typography>
-          <ConversaoCard />
-          <Typography gutterBottom variant="h6" component="h2">
-                Tempo Médio de Exibição (Minutos)
-              </Typography>
-          <TempoMedioCard />
-          <Typography gutterBottom variant="h6" component="h2">
-                Top trending vídeos
-              </Typography>
-          <TopTrendingCard />
-          <Typography gutterBottom variant="h6" component="h2">
-                Top trending vídeos
-              </Typography>
-          <NovidadesCard/>
-        </div>
-      </React.Fragment>
-    );
+        <Grid container spacing={16}>
+          <Grid item container spacing={16} lg={8}>
+            <ReplayCard />
+            <TempoMedioCard />
+            <ConversaoCard />
+            <TopTrendingCard />
+          </Grid>
+          <Grid item container spacing={16} lg={4}>
+            <NovidadesCard />
+          </Grid>          
+        </Grid>
+      </React.Fragment>;
   }
 }
 
