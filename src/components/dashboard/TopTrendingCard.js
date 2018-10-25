@@ -5,9 +5,7 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
-import CardMedia from "@material-ui/core/CardMedia";
 import CardActionArea from "@material-ui/core/CardActionArea";
-import image from "../img/media-default-thumbnail-url-video.png";
 import MediaControlCard from "./MediaControlCard";
 
 const styles = {

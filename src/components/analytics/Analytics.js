@@ -9,7 +9,6 @@ import ReplayCard from "../dashboard/ReplayCard";
 import ConversaoCard from "../dashboard/ConversaoCard";
 import TempoMedioCard from "../dashboard/TempoMedioCard";
 import TopTrendingCard from "../dashboard/TopTrendingCard";
-import NovidadesCard from "../dashboard/NovidadesCard";
 
 
 const styles = theme => ({
