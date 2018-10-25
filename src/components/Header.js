@@ -1,10 +1,11 @@
-import React from "react";
+import React, { Component } from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import classNames from "classnames";
 import AppBar from "@material-ui/core/AppBar";
 import Drawer from "@material-ui/core/Drawer";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
+import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import Menu from "@material-ui/core/Menu";
@@ -21,7 +22,7 @@ import Divider from "@material-ui/core/Divider";
 import List from "@material-ui/core/List";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import { mainListItems, secondaryListItems } from "./dashboard/listItems";
+import { MainList, SecondaryList} from "./dashboard/listItems";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
 
@@ -30,6 +31,11 @@ const drawerWidth = 240;
 const styles = theme => ({
   root: {
     display: "flex"
+  },
+  avatar: {
+    margin: 10,
+    width: 28,
+    height: 28
   },
   appBar: {
     transition: theme.transitions.create(["margin", "width"], {
@@ -125,6 +131,11 @@ const styles = theme => ({
     [theme.breakpoints.up("sm")]: {
       width: theme.spacing.unit * 9
     }
+  },
+  drawerBottom: {
+    position: "absolute",
+    bottom: 0,
+    width: "100%"
   }
 });
 
@@ -151,7 +162,7 @@ const darkTheme = createMuiTheme({
   }
 });
 
-class MainAppBar extends React.Component {
+class MainAppBar extends Component {
   state = {
     anchorEl: null,
     mobileMoreAnchorEl: null,
@@ -252,22 +263,8 @@ class MainAppBar extends React.Component {
               <Button component={Link} to="/">
                 <img className={classes.logo} src="img/logo.png" alt="Logo" />
               </Button>
-              <Button color="primary" component={Link} to="/">
-                Live
-              </Button>
-              <Button color="primary" component={Link} to="/">
-                Vídeo
-              </Button>
-              <Button color="primary" component={Link} to="/">
-                Play
-              </Button>
               <div className={classes.grow} />
               <div className={classes.sectionDesktop}>
-                <Button color="primary">
-                  <Link to="/landing-page" className={classes.linkPrimary}>
-                    Landing Page
-                  </Link>
-                </Button>
                 <Tooltip title="Notificações">
                   <IconButton color="primary">
                     <Badge badgeContent={17} color="secondary">
@@ -275,8 +272,8 @@ class MainAppBar extends React.Component {
                     </Badge>
                   </IconButton>
                 </Tooltip>
-                <Button className={classes.rightIcon} aria-owns={isMenuOpen ? "material-appbar" : null} aria-haspopup="true" onClick={this.handleProfileMenuOpen} color="primary">
-                  <AccountCircle className={classes.leftIcon} /> Account
+                <Button className={classes.rightIcon} aria-owns={isMenuOpen ? "material-appbar" : null} aria-haspopup="true" onClick={this.handleProfileMenuOpen} color="secondary">
+                  <Avatar alt="Layla Vicente" src="/img/darth-vader.jpg" className={classes.avatar} /> Layla Vicente
                 </Button>
               </div>
               <div className={classes.sectionMobile}>
@@ -291,7 +288,7 @@ class MainAppBar extends React.Component {
         </MuiThemeProvider>
 
         <MuiThemeProvider theme={darkTheme}>
-          <Drawer className={classes.drawer} variant="persistent" anchor="left" open={open} classes={{ paper: classes.drawerPaper }}>
+          <Drawer className={classes.drawer} variant="persistent" component="aside" anchor="left" open={open} classes={{ paper: classes.drawerPaper }}>
             <div className={classes.drawerHeader}>
               <IconButton onClick={this.handleDrawerClose}>
                 {theme.direction === "ltr" ? (
@@ -302,10 +299,12 @@ class MainAppBar extends React.Component {
               </IconButton>
             </div>
             <Divider />
-            <List classNames={classes.drawerItems}>{mainListItems}</List>
-            <Divider />
             <List classNames={classes.drawerItems}>
-              {secondaryListItems}
+              <MainList />
+            </List>
+            <Divider />
+            <List className={`${classes.drawerItems} ${classes.drawerBottom}`}>
+              <SecondaryList />
             </List>
           </Drawer>
         </MuiThemeProvider>
