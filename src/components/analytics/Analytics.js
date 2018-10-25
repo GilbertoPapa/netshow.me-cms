@@ -4,12 +4,12 @@ import { withStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-import SimpleLineChart from "./SimpleLineChart";
-import ReplayCard from "./ReplayCard";
-import ConversaoCard from "./ConversaoCard";
-import TempoMedioCard from "./TempoMedioCard";
-import TopTrendingCard from "./TopTrendingCard";
-import NovidadesCard from "./NovidadesCard";
+import SimpleLineChart from "../dashboard/SimpleLineChart";
+import ReplayCard from "../dashboard/ReplayCard";
+import ConversaoCard from "../dashboard/ConversaoCard";
+import TempoMedioCard from "../dashboard/TempoMedioCard";
+import TopTrendingCard from "../dashboard/TopTrendingCard";
+import NovidadesCard from "../dashboard/NovidadesCard";
 
 
 const styles = theme => ({

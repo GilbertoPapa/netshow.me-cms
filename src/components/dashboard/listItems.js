@@ -10,6 +10,7 @@ import PropTypes from "prop-types";
 import DashboardIcon from "@material-ui/icons/Dashboard";
 import PersonIcon from "@material-ui/icons/Person";
 import WifiIcon from "@material-ui/icons/Wifi";
+import PhotoIcon from "@material-ui/icons/Photo";
 import ShowChartIcon from "@material-ui/icons/ShowChart";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import ContactSupportIcon from "@material-ui/icons/ContactSupport";
@@ -79,7 +80,7 @@ handleListItemClick = (event, index) => {
 
         <ListItem button selected={this.state.selectedIndex === 3} onClick={event => this.handleListItemClick(event, 3)} component={Link} to="/galeria">
           <ListItemIcon>
-            <WifiIcon />
+            <PhotoIcon />
           </ListItemIcon>
           <ListItemText primary="Galeria" />
         </ListItem>
@@ -92,7 +93,7 @@ handleListItemClick = (event, index) => {
         </ListItem>
       <Collapse key="2" in={this.state[2]} timeout="auto" unmountOnExit>
         <List className={classes.subListBgDark} component="div" disablePadding>
-            <ListItem button className={classes.nested} selected={this.state.selectedIndex === 5} onClick={event => this.handleListItemClick(event, 5)}>
+          <ListItem button className={classes.nested} selected={this.state.selectedIndex === 5} onClick={event => this.handleListItemClick(event, 5)} component={Link} to="/analytics/video">
               <ListItemText inset primary="Vídeo" />
             </ListItem>
             <ListItem button className={classes.nested} selected={this.state.selectedIndex === 6} onClick={event => this.handleListItemClick(event, 6)}>

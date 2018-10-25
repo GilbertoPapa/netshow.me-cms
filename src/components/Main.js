@@ -4,6 +4,7 @@ import Dashboard from "./dashboard/Dashboard";
 import Perfil from "./admin/Perfil";
 import Usuarios from "./admin/GerenciamentoDeUsuarios";
 import Galeria from "./album/Album";
+import Analytics from "./analytics/Analytics";
 import classNames from "classnames";
 import { withStyles } from "@material-ui/core/styles";
 
@@ -44,20 +45,17 @@ class Main extends React.Component {
     const { classes } = this.props;
     const { open } = this.state;
 
-    return (
-      <main
-        className={classNames(classes.content, {
+    return <main className={classNames(classes.content, {
           [classes.contentShift]: open
-        })}
-      >
+        })}>
         <Switch>
           <Route exact path="/" component={Dashboard} />
           <Route path="/perfil" component={Perfil} />
           <Route path="/gerenciamento-de-usuarios" component={Usuarios} />
           <Route path="/galeria" component={Galeria} />
+          <Route path="/analytics/video" component={Analytics} />
         </Switch>
-      </main>
-    );
+      </main>;
   }
 }
 

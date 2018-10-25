@@ -192,8 +192,7 @@ class Album extends React.Component {
             <VideoCard />
             <VideoCard />
           </Grid>
-        </Typography>
-        <div className={classes.tableContainer} />
+        </Typography>        
       </React.Fragment>
     );
   }
