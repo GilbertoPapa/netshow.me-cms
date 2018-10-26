@@ -41,8 +41,6 @@ function SimpleCard(props) {
           Top Trending Vídeos
         </Typography>
         <Card className={classes.card}>
-          
-          
             <CardContent>
               <CardActionArea>
               <MediaControlCard/>

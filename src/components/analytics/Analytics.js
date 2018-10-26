@@ -60,12 +60,17 @@ class Analytics extends React.Component {
           <SimpleLineChart />
         </Typography>
         <Grid container spacing={16}>
-          <Grid item container spacing={16} lg={8}>
+          <Grid item container spacing={16} lg={6}>
             <ReplayCard />
-            <TempoMedioCard />
-            <ConversaoCard />
-            <TopTrendingCard />
+            <ReplayCard />
+            <ReplayCard />
+            <ReplayCard />
+            
+          </Grid>
+          <Grid item container spacing={16} lg={6}>
+            <ReplayCard />
           </Grid>      
+              
         </Grid>
       </React.Fragment>;
   }
