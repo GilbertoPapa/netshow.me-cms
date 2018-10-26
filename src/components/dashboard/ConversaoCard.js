@@ -6,8 +6,8 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import Grid from "@material-ui/core/Grid";
 import Select from "./Select";
+import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 
 const styles = {
   card: {
@@ -27,46 +27,59 @@ const styles = {
     marginBottom: 12
   }
 };
-const card = [1];
+
+const custom = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#06baf6"
+    },
+    secondary: {
+      main: "#314E6F"
+    }
+  }
+});
+
 function SimpleCard(props) {
   const { classes } = props;
 
   return (
     <React.Fragment>
-      <Grid item key={card} sm={12} md={6}>
-        <Typography gutterBottom variant="h6" component="h2">
-          Conversão
-        </Typography>
-        <Card className={classes.card}>
-          <CardContent className={classes.cardContent}>
-            
-            <Typography gutterBottom variant="h4" component="h2">
-              75%
-            </Typography>
-            <Typography>
-              <br />
-            </Typography>
-            <Typography>
-              <br />
-            </Typography>
-            <Typography>
-              <br />
-            </Typography>
-            <Typography>
-              <br />
-            </Typography>
-            <Typography>
-              <br />
-            </Typography>
-          </CardContent>
-          <CardActions>
-            <Select />
-            <Button size="small" color="primary">
-              Filtrar
-            </Button>
-          </CardActions>
-        </Card>
-      </Grid>
+      <MuiThemeProvider theme={custom}>
+        
+          <Typography gutterBottom variant="h6" component="h2">
+            Conversão
+          </Typography>
+          <Card className={classes.card}>
+            <CardContent className={classes.cardContent}>
+              
+              <Typography gutterBottom variant="h4" component="h2">
+                75%
+              </Typography>
+              <Typography>
+                <br />
+              </Typography>
+              <Typography>
+                <br />
+              </Typography>
+              <Typography>
+                <br />
+              </Typography>
+              <Typography>
+                <br />
+              </Typography>
+              <Typography>
+                <br />
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Select />
+              <Button size="small" color="primary">
+                Filtrar
+              </Button>
+            </CardActions>
+          </Card>        
+
+      </MuiThemeProvider>
     </React.Fragment>
   );
 }

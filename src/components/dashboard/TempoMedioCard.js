@@ -6,8 +6,8 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import Grid from "@material-ui/core/Grid";
 import Select from "./Select";
+import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 
 const styles = {
   card: {
@@ -28,13 +28,25 @@ const styles = {
     marginBottom: 12
   }
 };
-const card = [1];
+
+const custom = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#06baf6"
+    },
+    secondary: {
+      main: "#314E6F"
+    }
+  }
+});
+
 function SimpleCard(props) {
   const { classes } = props;
 
   return (
     <React.Fragment>
-      <Grid item key={card} sm={12} md={6}>
+      <MuiThemeProvider theme={custom}>      
+      
         <Typography gutterBottom variant="h6" component="h2">
           Tempo Médio de Exibição (Minutos)
         </Typography>
@@ -51,9 +63,9 @@ function SimpleCard(props) {
               Filtrar
             </Button>
           </CardActions>
-        </Card>
-      </Grid>
-    
+        </Card>      
+
+      </MuiThemeProvider>    
     </React.Fragment>    
   );
 }

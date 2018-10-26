@@ -71,7 +71,7 @@ handleListItemClick = (event, index) => {
           </List>
         </Collapse>
 
-        <ListItem button selected={this.state.selectedIndex === 2} onClick={event => this.handleListItemClick(event, 2)}>
+      <ListItem button selected={this.state.selectedIndex === 2} onClick={event => this.handleListItemClick(event, 2)} component={Link} to="/transmissao">
           <ListItemIcon>
             <WifiIcon />
           </ListItemIcon>

@@ -9,6 +9,7 @@ import Typography from "@material-ui/core/Typography";
 import Select from "./Select";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 
+
 const styles = {
   card: {
     minWidth: 275,
@@ -61,8 +62,8 @@ function SimpleCard(props) {
         </Typography>
         <Card className={classes.card}>
           <CardContent className={classes.cardContent}>
-            <Typography gutterBottom variant="h4" component="h2">
-              35%
+            <Typography gutterBottom variant="h6" component="h2">
+              12%
             </Typography>
           </CardContent>
           <CardActions>

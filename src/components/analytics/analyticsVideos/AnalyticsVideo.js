@@ -4,11 +4,19 @@ import { withStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-import SimpleLineChart from "../dashboard/SimpleLineChart";
-import ReplayCard from "../dashboard/ReplayCard";
-import ConversaoCard from "../dashboard/ConversaoCard";
-import TempoMedioCard from "../dashboard/TempoMedioCard";
-import TopTrendingCard from "../dashboard/TopTrendingCard";
+import SimpleLineChart from "./SimpleLineChart";
+import RetencaoCard from "./RetencaoCard";
+import AbandonoVideoCard from "./AbandonoVideoCard";
+import TaxaReplayCard from "./TaxaReplayCard";
+import TaxaReproducaoCard from "./TaxaReproducaoCard";
+import TempoAssistidoCard from "./TempoAssistidoCard";
+import TempoCarregamentoCard from "./TempoCarregamentoCard";
+
+import AssistidaCard from "./AssistidaCard";
+import InteracoesCard from "./InteracoesCard";
+import VisualizacoesCard from "./VisualizacoesCard";
+import DispositivosCard from "./DispositivosCard";
+
 
 
 const styles = theme => ({
@@ -54,22 +62,33 @@ class Analytics extends React.Component {
         <CssBaseline />
 
         <Typography variant="h4" gutterBottom component="h2">
-          Views
+          DADOS SOBRE LIVES
+        </Typography>
+        <Typography variant="h6" gutterBottom component="h2">
+          Quantidades de participantes
         </Typography>
         <Typography component="div" className={classes.chartContainer}>
           <SimpleLineChart />
         </Typography>
         <Grid container spacing={16}>
-          <Grid item container spacing={16} lg={6}>
-            <ReplayCard />
-            <ReplayCard />
-            <ReplayCard />
-            <ReplayCard />
-            
+          <Grid item sm={12} md={6}>            
+          <RetencaoCard />
           </Grid>
-          <Grid item container spacing={16} lg={6}>
-            <ReplayCard />
+          <Grid item sm={12} md={6}>            
+          <TempoCarregamentoCard />
+          </Grid>
+          <Grid item sm={12} md={6}>            
+          <TaxaReproducaoCard />
+          </Grid>
+          <Grid item sm={12} md={6}>            
+          <TempoAssistidoCard />          
           </Grid>      
+          <Grid item sm={12} md={6}>            
+          <AbandonoVideoCard />          
+          </Grid> 
+          <Grid item sm={12} md={6}>            
+          <TaxaReplayCard />          
+          </Grid> 
               
         </Grid>
       </React.Fragment>;

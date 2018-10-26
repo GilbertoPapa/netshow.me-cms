@@ -5,11 +5,11 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import SimpleLineChart from "./SimpleLineChart";
-import ReplayCard from "./ReplayCard";
-import ConversaoCard from "./ConversaoCard";
-import TempoMedioCard from "./TempoMedioCard";
-import TopTrendingCard from "./TopTrendingCard";
-import NovidadesCard from "./NovidadesCard";
+import AssistidaCard from "./AssistidaCard";
+import InteracoesCard from "./InteracoesCard";
+import VisualizacoesCard from "./VisualizacoesCard";
+import DispositivosCard from "./DispositivosCard";
+
 
 
 const styles = theme => ({
@@ -35,7 +35,7 @@ const styles = theme => ({
   }
 });
 
-class Dashboard extends React.Component {
+class Analytics extends React.Component {
   state = {
     open: true
   };
@@ -55,36 +55,36 @@ class Dashboard extends React.Component {
         <CssBaseline />
 
         <Typography variant="h4" gutterBottom component="h2">
-          Views
+          DADOS SOBRE LIVES
+        </Typography>
+        <Typography variant="h6" gutterBottom component="h2">
+          Quantidades de participantes
         </Typography>
         <Typography component="div" className={classes.chartContainer}>
           <SimpleLineChart />
         </Typography>
         <Grid container spacing={16}>
-          <Grid item container spacing={16} lg={8}>
-            <Grid item sm={12} md={6}>            
-              <ReplayCard />
-            </Grid>
-            <Grid item sm={12} md={6}>
-              <TempoMedioCard />
-            </Grid>
-            <Grid item sm={12} md={6}>
-              <ConversaoCard />
-            </Grid>
-            <Grid item sm={12} md={6}>
-              <TopTrendingCard />
-            </Grid>
+          <Grid item sm={12} md={6}>            
+          <AssistidaCard />
           </Grid>
-          <Grid item container spacing={16} lg={4}>
-            <NovidadesCard />
-          </Grid>          
+          <Grid item sm={12} md={6}>            
+          <VisualizacoesCard />
+          </Grid>
+          <Grid item sm={12} md={6}>            
+          <DispositivosCard />
+          </Grid>
+          <Grid item sm={12} md={6}>            
+          <InteracoesCard />          
+          </Grid>      
+          
+              
         </Grid>
       </React.Fragment>;
   }
 }
 
-Dashboard.propTypes = {
+Analytics.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(Dashboard);
+export default withStyles(styles)(Analytics);

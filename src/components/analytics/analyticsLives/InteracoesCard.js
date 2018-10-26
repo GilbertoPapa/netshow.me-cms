@@ -57,12 +57,12 @@ function SimpleCard(props) {
     <MuiThemeProvider theme={custom}>      
       
         <Typography gutterBottom variant="h6" component="h2">
-          Taxa de Replay
+          Interações durante a transmissão
         </Typography>
         <Card className={classes.card}>
           <CardContent className={classes.cardContent}>
-            <Typography gutterBottom variant="h4" component="h2">
-              35%
+            <Typography gutterBottom variant="h6" component="h2">
+              297
             </Typography>
           </CardContent>
           <CardActions>
