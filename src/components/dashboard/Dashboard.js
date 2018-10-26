@@ -62,10 +62,18 @@ class Dashboard extends React.Component {
         </Typography>
         <Grid container spacing={16}>
           <Grid item container spacing={16} lg={8}>
-            <ReplayCard />
-            <TempoMedioCard />
-            <ConversaoCard />
-            <TopTrendingCard />
+            <Grid item sm={12} md={6}>            
+              <ReplayCard />
+            </Grid>
+            <Grid item sm={12} md={6}>
+              <TempoMedioCard />
+            </Grid>
+            <Grid item sm={12} md={6}>
+              <ConversaoCard />
+            </Grid>
+            <Grid item sm={12} md={6}>
+              <TopTrendingCard />
+            </Grid>
           </Grid>
           <Grid item container spacing={16} lg={4}>
             <NovidadesCard />
