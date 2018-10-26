@@ -118,11 +118,11 @@ class Usuarios extends Component {
     return <React.Fragment>
         <CssBaseline />
         <MuiThemeProvider theme={custom}>
-          <Typography variant="h2" component="h1" gutterDown>
+          <Typography variant="h2" component="h1" gutterBottom>
             Gerenciamento de Usuários
           </Typography>
           <Grid container className={classes.someSpace} justify="space-between" spacing={16} />
-          <Typography variant="h4" component="h2" gutterDown>
+          <Typography variant="h4" component="h2" gutterBottom>
             Adicionar usuário
           </Typography>
           <form className={classes.form} noValidate autoComplete="off">
@@ -151,7 +151,7 @@ class Usuarios extends Component {
               </Grid>
               <Grid container item xs={12} lg={6}>
                 <Grid item xs={12}>
-                  <Typography variant="h6" component="h3" gutterDown>
+                  <Typography variant="h6" component="h3" gutterBottom>
                     Tipos de Acesso
                   </Typography>
                 </Grid>

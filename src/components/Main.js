@@ -5,7 +5,8 @@ import Perfil from "./admin/Perfil";
 import Usuarios from "./admin/GerenciamentoDeUsuarios";
 import Transmissao from "./transmissao/Transmissao";
 import Galeria from "./album/Album";
-import Analytics from "./analytics/analyticsLives/AnalyticsLive";
+import AnalyticsVideo from "./analytics/analyticsVideos/AnalyticsVideo";
+import AnalyticsLive from "./analytics/analyticsLives/AnalyticsLive";
 import classNames from "classnames";
 import { withStyles } from "@material-ui/core/styles";
 
@@ -40,7 +41,8 @@ class Main extends React.Component {
           <Route path="/admin/gerenciamento-de-usuarios" component={Usuarios} />
           <Route path="/transmissao" component={Transmissao} />
           <Route path="/galeria" component={Galeria} />
-          <Route path="/analytics/video" component={Analytics} />
+          <Route path="/analytics/video" component={AnalyticsVideo} />
+          <Route path="/analytics/live" component={AnalyticsLive} />
         </Switch>
       </main>;
   }

@@ -96,7 +96,7 @@ handleListItemClick = (event, index) => {
           <ListItem button className={classes.nested} selected={this.state.selectedIndex === 5} onClick={event => this.handleListItemClick(event, 5)} component={Link} to="/analytics/video">
               <ListItemText inset primary="Vídeo" />
             </ListItem>
-            <ListItem button className={classes.nested} selected={this.state.selectedIndex === 6} onClick={event => this.handleListItemClick(event, 6)}>
+          <ListItem button className={classes.nested} selected={this.state.selectedIndex === 6} onClick={event => this.handleListItemClick(event, 6)} component={Link} to="/analytics/live">
               <ListItemText inset primary="Live" />
             </ListItem>
             <ListItem button className={classes.nested} selected={this.state.selectedIndex === 7} onClick={event => this.handleListItemClick(event, 7)}>

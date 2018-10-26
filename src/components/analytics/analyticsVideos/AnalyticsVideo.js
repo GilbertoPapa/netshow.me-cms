@@ -12,13 +12,6 @@ import TaxaReproducaoCard from "./TaxaReproducaoCard";
 import TempoAssistidoCard from "./TempoAssistidoCard";
 import TempoCarregamentoCard from "./TempoCarregamentoCard";
 
-import AssistidaCard from "./AssistidaCard";
-import InteracoesCard from "./InteracoesCard";
-import VisualizacoesCard from "./VisualizacoesCard";
-import DispositivosCard from "./DispositivosCard";
-
-
-
 const styles = theme => ({
   toolbar: {
     paddingRight: 1
@@ -61,10 +54,10 @@ class Analytics extends React.Component {
     return <React.Fragment>
         <CssBaseline />
 
-        <Typography variant="h4" gutterBottom component="h2">
-          DADOS SOBRE LIVES
+        <Typography variant="h2" gutterBottom component="h1">
+          Dados sobre Vídeos
         </Typography>
-        <Typography variant="h6" gutterBottom component="h2">
+        <Typography variant="h4" gutterBottom component="h2">
           Quantidades de participantes
         </Typography>
         <Typography component="div" className={classes.chartContainer}>

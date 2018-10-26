@@ -54,31 +54,31 @@ class Analytics extends React.Component {
     return <React.Fragment>
         <CssBaseline />
 
-        <Typography variant="h4" gutterBottom component="h2">
-          DADOS SOBRE LIVES
+        <Typography variant="h2" gutterBottom component="h1">
+          Dados sobre Lives
         </Typography>
-        <Typography variant="h6" gutterBottom component="h2">
+        <Typography variant="h4" gutterBottom component="h2">
           Quantidades de participantes
         </Typography>
         <Typography component="div" className={classes.chartContainer}>
           <SimpleLineChart />
         </Typography>
+
         <Grid container spacing={16}>
           <Grid item sm={12} md={6}>            
-          <AssistidaCard />
+            <AssistidaCard />
           </Grid>
           <Grid item sm={12} md={6}>            
-          <VisualizacoesCard />
+            <VisualizacoesCard />
           </Grid>
           <Grid item sm={12} md={6}>            
-          <DispositivosCard />
+            <DispositivosCard />
           </Grid>
           <Grid item sm={12} md={6}>            
-          <InteracoesCard />          
-          </Grid>      
-          
-              
+            <InteracoesCard />          
+          </Grid>              
         </Grid>
+        
       </React.Fragment>;
   }
 }

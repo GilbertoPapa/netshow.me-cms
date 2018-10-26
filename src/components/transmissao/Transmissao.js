@@ -64,10 +64,10 @@ class Transmissao extends Component {
     return <React.Fragment>
         <CssBaseline />
         <MuiThemeProvider theme={custom}>
-          <Typography className={classes.marginBottom2Rem} variant="h2" component="h1" gutterDown>
+          <Typography className={classes.marginBottom2Rem} variant="h2" component="h1" gutterBottom>
             Transmissão
           </Typography>
-          <Typography className={classes.marginBottom1Rem} variant="h4" component="h2" gutterDown>
+          <Typography className={classes.marginBottom1Rem} variant="h4" component="h2" gutterBottom>
             Selecione uma opção:
           </Typography>
           <Grid container spacing={16}>
