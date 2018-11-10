@@ -1,7 +1,7 @@
 # Netshow.me CMS
 Projeto de criação de um CMS para o **Gama Experience #14**.
 
-Feito em conjunto com o [Gilberto Papa](https://github.com/GilbertoPapa).
+Feito em conjunto com o [Vinicius Costa](https://github.com/viniciuscosta89).
 
 ## Iniciando
 Foi utilizado o Yarn como gerenciador de pacotes.
